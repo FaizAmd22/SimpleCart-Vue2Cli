@@ -8,8 +8,18 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.2",
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.14",
+    "vue-router": "^3.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -32,12 +42,23 @@
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "prettier"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "parser": "flow"
+        }
+      ],
+      "arrow-body-style": "off",
+      "prefer-arrow-callback": "off"
+    }
   },
   "browserslist": [
     "> 1%",
